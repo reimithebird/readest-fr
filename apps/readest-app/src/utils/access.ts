@@ -66,7 +66,9 @@ export const isCloudSyncInPlan = (plan: UserPlan, customizationPurchased: boolea
  * Every gate goes through {@link isCloudSyncAllowed}, so this flag is the
  * whole toggle.
  */
-export const CLOUD_SYNC_REQUIRES_PREMIUM = true;
+// Readest FR fork: third-party cloud sync (WebDAV / Google Drive / S3) stays
+// free for every plan. Upstream ships this as `true`.
+export const CLOUD_SYNC_REQUIRES_PREMIUM = false;
 
 /**
  * Whether third-party cloud sync is available for a plan. Falls back to the

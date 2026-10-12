@@ -404,7 +404,9 @@ fn compute_updater_disabled(
 
 #[cfg(desktop)]
 fn updater_disabled() -> bool {
-    let env_disable = std::env::var("READEST_DISABLE_UPDATER").is_ok();
+    // Readest FR fork: the in-app updater points at upstream's release feed,
+    // which is not ours, so keep it disabled on every platform.
+    let env_disable = true;
     #[cfg(target_os = "linux")]
     {
         let is_flatpak =
