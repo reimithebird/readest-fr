@@ -1,4 +1,4 @@
-package com.bilingify.readest
+package com.rinareimi.readest
 
 import android.os.Build
 import android.os.Bundle
